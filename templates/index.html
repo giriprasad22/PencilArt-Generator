@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SketchWizard Pro | M Giri Prasad</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    
+    <div class="container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                <h1>SketchWizard <span>Pro</span></h1>
+            </div>
+            <div class="developer-tag">
+                <span>by M Giri Prasad</span>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div class="upload-section" id="uploadSection">
+                <div class="upload-card">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <div class="upload-icon">
+                        <div class="icon-bg"></div>
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h2>Drop Your Image Here</h2>
+                    <p>Supports JPG, PNG, WEBP (Max 10MB)</p>
+                    <button class="browse-btn" id="browseBtn">
+                        <i class="fas fa-folder-open"></i> Browse Files
+                    </button>
+                </div>
+            </div>
+
+            <div class="processing-section" id="processingSection">
+                <div class="sketch-loader">
+                    <div class="pencil-animation">
+                        <div class="pencil"></div>
+                        <div class="pencil-shadow"></div>
+                    </div>
+                    <div class="loading-text">
+                        <span class="text">Transforming into sketch</span>
+                        <span class="dots"></span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                        <span class="progress-text" id="progressText">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="result-header">
+                    <h2>Your Masterpiece is Ready!</h2>
+                    <div class="result-actions">
+                        <button class="action-btn new-btn" id="newBtn">
+                            <i class="fas fa-plus"></i> New
+                        </button>
+                        <button class="action-btn download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="image-comparison">
+                    <div class="image-container original">
+                        <div class="image-label">
+                            <i class="fas fa-image"></i> Original
+                        </div>
+                        <img id="originalImage" src="" alt="Original">
+                    </div>
+                    <div class="image-container sketch">
+                        <div class="image-label">
+                            <i class="fas fa-pencil-alt"></i> Sketch
+                        </div>
+                        <img id="resultImage" src="" alt="Sketch">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/giri-prasad-m" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p>© 2025 SketchWizard Pro | Crafted with <i class="fas fa-heart"></i> by M Giri Prasad</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+</html>

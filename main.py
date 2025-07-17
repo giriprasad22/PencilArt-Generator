@@ -6,7 +6,10 @@ import uuid
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={
+    r"/process": {"origins": "*"},
+    r"/static/uploads/*": {"origins": "*"}
+}) # Enable CORS for all routes
 
 # Configuration
 UPLOAD_FOLDER = 'static/uploads'
